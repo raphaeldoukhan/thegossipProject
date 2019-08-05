@@ -1,0 +1,16 @@
+<h1>Les Potins</h1>
+
+<div class="d-flex align-content-around flex-wrap">
+
+
+<% @gossips.each do |gossip| %>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"> <%= gossip.title %> </h5>
+      <p class="card-text">  <a href="http://localhost:3000/profile/<%=gossip.id%>"> <%= gossip.user.first_name %> </a> </p>
+      <a href="http://localhost:3000/gossip/<%=gossip.id%>" class="btn btn-primary">Voir le Gossip</a>
+    </div>
+  </div>
+ <% end %>
+
+</div>
